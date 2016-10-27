@@ -53,13 +53,15 @@ table {
 }
 
 /* 
-========Default Fonts========
+========Customization. Default Fonts========
 */
 
 body {
+background: #293f50;
 color: #888;
-font: 300 16/22px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 } 
+
 
 /* 
 ========Grid styles========
@@ -115,6 +117,27 @@ Note: Containment for floating elements
 }
 
 /* 
+========Rows========
+*/
+
+.row {
+  background: #fff;
+  padding: 66px 0 44px 0;
+}
+
+.row,
+.row-alt {
+  min-width: 960px;
+}
+
+.row-alt {
+   background: #cbe2c1;
+   background: -webkit-linear-gradient(to right, #a1d3b0, #f6f1d3);
+   background: -moz-linear-gradient(to right, #a1d3b0, #f6f1d3);
+   background: linear-gradient(to right, #a1d3b0, #f6f1d3);
+   padding: 44px 0 22px 0;
+ }
+/* 
 ========Typography========
 */
 
@@ -152,27 +175,51 @@ h5 {
   color: #a9b2b9;
   font-size: 14px;
   font-weight: 400;
+  text-transform: uppercase;
 }
 strong {
   font-weight: 400;
+}
 cite, em {
   font-style: italic;
   }
 }
 
 /* 
-========Link styles========
+========Link style========
 */
 a:hover {
   color: #a9b2b9;
 }
 a {
   color: #648880;
+  text-decoration: none;
+}
+
+p a {
+  border-bottom: 1px solid #dfe2e5;
 }
 
 .teaser a:hover h3 {
   color: #a9b2b9;
 } 
+
+.primary-header a,
+.primary-footer a {
+  color: #fff;
+}
+.primary-header a:hover,
+.primary-footer a:hover {
+  color: #648880;
+}
+
+/* 
+========Navigation bar position========
+*/
+
+.nav {
+  text-align: right;
+}
 
 /* 
 ========Primary header (under h1 + under container group class)========
@@ -182,16 +229,27 @@ a {
   border-top: 4px solid #648880;
   float: left;
   font-size: 48px;
+  font-weight: 100px;
+  letter-spacing: .5px;
   line-height: 44px;
   padding: 40px 0 22px 0;
+  text-transform: uppercase;
 }
 
 .tagline {
   margin: 66px 0 22px 0;
+  text-align: right;
 }
 .primary-nav {
   font-size: 14px;
   font-weight: 400;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+.primary-header a,
+.primary-footer a {
+  color: #fff;
 }
 
 /* 
@@ -199,8 +257,10 @@ a {
 */
 
 .hero {
+  color: #fff;
   line-height: 44px;
   padding: 22px 80px 66px 80px;
+  text-align: center;
 }
 
 .hero h2 {
@@ -211,18 +271,41 @@ a {
 }
 
 /* 
+========Leads (under container and raw-alt)========
+*/
+
+.lead {
+  text-align: center;
+}
+.lead p {
+  font-size: 21px;
+  line-height: 33px;
+}
+
+
+/* 
 ========Buttons (under hero container class)========
 */
 
 .btn {
   border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 400;
+  letter-spacing: .5px;
   display: inline-block;
   margin: 0;
+  text-transform: uppercase;
 }
 
 .btn-alt {
-  border: 1px solid #dfe2e5;
+  border: 1px solid #fff;
   padding: 10px 30px;
+}
+
+.btn-alt:hover {
+  background: #fff;
+  color: #648880;
 }
 
 /* 
